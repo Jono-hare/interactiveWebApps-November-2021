@@ -1,5 +1,6 @@
 // testing code
 const colorCollection = document.getElementsByClassName("box");
+
 Array.from(colorCollection).forEach(function (colorCollection) {
   colorCollection.onclick = function () {
     const bgColor = colorCollection.id;
@@ -7,6 +8,15 @@ Array.from(colorCollection).forEach(function (colorCollection) {
     colorCollection.innerText = colorCollection.id;
   };
 });
+
+console.log(colorCollection);
+console.log(Array.from(colorCollection));
+
+// Call with Justin
+
+// array.forEach((element) => {});
+
+// Array.from;
 
 // Working code
 

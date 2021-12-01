@@ -33,5 +33,5 @@ scrambleLetters = function (string) {
 document.getElementById("btn").onclick = function () {
   document.getElementById("word").innerHTML = scrambleLetters(string);
 };
-console.log(scrambleLetters(string));
-console.log(soupArray);
+// console.log(scrambleLetters(string));
+// console.log(soupArray);
