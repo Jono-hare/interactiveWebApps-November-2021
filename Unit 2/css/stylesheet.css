@@ -1,0 +1,106 @@
+:root {
+  /* Fonts */
+  --calcBtns: "Genos", sans-serif;
+  --calcDisplay: "Orbitron", sans-serif;
+
+  /* Colors */
+  --primary-100: #ffcdb2;
+  --primary-300: #ffb4a2;
+  --primary-600: #e5989b;
+  --primary-900: #b5838d;
+  --secondary: #6d6875;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-weight: 500;
+  font-family: var(--calcDisplay);
+}
+
+/* Calc layout */
+
+.calcDisplay {
+  height: 100px;
+  width: 433px;
+  background-color: var(--secondary);
+  margin: auto;
+  font-family: var(--calcDisplay);
+  color: var(--primary-100);
+  font-size: 2.25rem;
+  font-weight: 900;
+  padding: 20px;
+  display: flex;
+  justify-content: right;
+}
+
+.calc {
+  width: 430px;
+  margin: auto;
+}
+
+.numbers {
+  display: inline-block;
+  float: left;
+  width: 327px;
+  color: var(--secondary);
+}
+
+.operators {
+  display: inline-block;
+  float: right;
+  width: 100px;
+}
+
+.equals {
+  display: block;
+  width: 220px;
+  transform: translateX(-110px);
+}
+
+#equals {
+  width: 210px;
+  transform: translate(-110px, -106px);
+}
+
+/* Button styling */
+
+.numbers button {
+  background-color: ivory;
+  width: 100px;
+  height: 100px;
+  margin: 3px;
+  font-family: var(--calcBtns);
+  background-color: var(--primary-600);
+  font-size: 1.5rem;
+  color: #000;
+  font-weight: 600;
+}
+
+button,
+.calc {
+  box-shadow: 1px 1px 1px #000;
+}
+.operators button {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 3px;
+  font-family: var(--calcBtns);
+  background-color: var(--primary-900);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Animations */
+
+.numbers button:hover,
+.operators button:hover {
+  background-color: var(--primary-300);
+  box-shadow: 3px 3px 8px var(--secondary);
+  transition: 0.5s;
+}
