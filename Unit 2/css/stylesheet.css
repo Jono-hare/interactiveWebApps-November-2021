@@ -4,11 +4,11 @@
   --calcDisplay: "Orbitron", sans-serif;
 
   /* Colors */
-  --primary-100: #ffcdb2;
-  --primary-300: #ffb4a2;
-  --primary-600: #e5989b;
-  --primary-900: #b5838d;
-  --secondary: #6d6875;
+  --primary-100: #d9ed92;
+  --primary-300: #99d98c;
+  --primary-600: #168aad;
+  --primary-900: #1a759f;
+  --secondary: #184e77;
 }
 
 *,
@@ -25,73 +25,91 @@ body {
 /* Calc layout */
 
 .calcDisplay {
-  height: 100px;
-  width: 433px;
+  /* height: 100px; */
+  height: 6.25rem;
+  /* width: 433px; */
+  width: 27.063rem;
   background-color: var(--secondary);
   margin: auto;
   font-family: var(--calcDisplay);
   color: var(--primary-100);
   font-size: 2.25rem;
   font-weight: 900;
-  padding: 20px;
+  /* padding: 20px; */
+  padding: 1.25rem;
   display: flex;
   justify-content: right;
 }
 
 .calc {
-  width: 430px;
+  /* width: 430px; */
+  width: 26.875rem;
   margin: auto;
 }
 
 .numbers {
   display: inline-block;
   float: left;
-  width: 327px;
+  /* width: 327px; */
+  width: 20.438rem;
   color: var(--secondary);
 }
 
 .operators {
   display: inline-block;
   float: right;
-  width: 100px;
+  /* width: 100px; */
+  width: 6.25rem;
 }
 
 .equals {
   display: block;
-  width: 220px;
-  transform: translateX(-110px);
+  /* width: 220px; */
+  width: 13.75rem;
+  /* transform: translateX(-110px); */
+  transform: translateX(-6.875rem);
 }
 
 #equals {
-  width: 210px;
-  transform: translate(-110px, -106px);
+  /* width: 210px; */
+  width: 13.125rem;
+  /* transform: translate(-110px, -106px); */
+  transform: translate(-6.875rem, -6.625rem);
 }
 
 /* Button styling */
 
 .numbers button {
   background-color: ivory;
-  width: 100px;
-  height: 100px;
-  margin: 3px;
+  /* width: 100px; */
+  width: 6.25rem;
+  /* height: 100px; */
+  height: 6.25rem;
+  /* margin: 3px; */
+  margin: 0.188rem;
   font-family: var(--calcBtns);
   background-color: var(--primary-600);
   font-size: 1.5rem;
-  color: #000;
+  color: var(--primary-100);
   font-weight: 600;
 }
 
 button,
 .calc {
-  box-shadow: 1px 1px 1px #000;
+  /* box-shadow: 1px 1px 1px #000; */
+  box-shadow: 0.063rem 0.063rem 0.063rem var(--primary-100);
 }
 .operators button {
-  width: 100px;
-  height: 100px;
+  /* width: 100px; */
+  width: 6.25rem;
+  /* height: 100px; */
+  height: 6.25rem;
   display: inline-block;
-  margin: 3px;
+  /* margin: 3px; */
+  margin: 0.188rem;
   font-family: var(--calcBtns);
   background-color: var(--primary-900);
+  color: var(--primary-100);
   font-size: 1.5rem;
   font-weight: 600;
 }
@@ -101,6 +119,8 @@ button,
 .numbers button:hover,
 .operators button:hover {
   background-color: var(--primary-300);
-  box-shadow: 3px 3px 8px var(--secondary);
+  /* box-shadow: 3px 3px 8px var(--secondary); */
+  box-shadow: 0.188rem 0.188rem 0.5rem var(--primary-900);
+  color: var(--secondary);
   transition: 0.5s;
 }

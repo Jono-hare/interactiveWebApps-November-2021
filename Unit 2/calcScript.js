@@ -2,11 +2,13 @@
 
 const keyNumbers = document.getElementsByClassName("keyNumber");
 const displayPrint = document.getElementById("display");
+// let display = displayPrint.innerText;
 
 Array.from(keyNumbers).forEach(function (keyNumbers) {
   keyNumbers.onclick = function () {
     const keyPrintNum = keyNumbers.innerHTML;
     displayPrint.innerText = keyPrintNum;
+    // display = keyPrintNum;
   };
 });
 
@@ -16,7 +18,7 @@ Array.from(keyNumbers).forEach(function (keyNumbers) {
 
 const keyOperators = document.getElementsByClassName("operator");
 
-Array.from(keyOperators).forEach(function (keyOperators) {
+let inputNum = Array.from(keyOperators).forEach(function (keyOperators) {
   keyOperators.onclick = function () {
     const keyPrintOps = keyOperators.innerHTML;
     displayPrint.innerText = keyPrintOps;
@@ -24,3 +26,13 @@ Array.from(keyOperators).forEach(function (keyOperators) {
 });
 
 // END > Print operators to display
+
+// Result computing
+
+// function must accept 3 args
+// input 1 should display on the screen
+// chosen operator should display on the screen with input 1
+// input 1 + operator + input 2 should now display
+// enter btn should compute results and return them to the display
+
+// End > Result computing
