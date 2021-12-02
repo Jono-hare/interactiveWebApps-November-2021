@@ -19,6 +19,7 @@
 
 body {
   font-weight: 500;
+  font-family: var(--calcDisplay);
 }
 
 /* Calc layout */
@@ -33,6 +34,8 @@ body {
   font-size: 2.25rem;
   font-weight: 900;
   padding: 20px;
+  display: flex;
+  justify-content: right;
 }
 
 .calc {
@@ -79,7 +82,7 @@ body {
 }
 
 button,
-.calcDisplay {
+.calc {
   box-shadow: 1px 1px 1px #000;
 }
 .operators button {

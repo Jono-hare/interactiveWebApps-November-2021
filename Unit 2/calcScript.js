@@ -1,16 +1,26 @@
-const numbers = document.getElementsByClassName("keyNumber");
-const operators = document.getElementsByClassName("operator");
+//  Print numbers to display
+
+const keyNumbers = document.getElementsByClassName("keyNumber");
 const displayPrint = document.getElementById("display");
 
-Array.from(numbers).forEach(function (numbers) {
-  numbers.onclick = function () {
-    const keyPrint = numbers.id;
-    displayPrint.innerText = keyPrint.id;
+Array.from(keyNumbers).forEach(function (keyNumbers) {
+  keyNumbers.onclick = function () {
+    const keyPrintNum = keyNumbers.innerHTML;
+    displayPrint.innerText = keyPrintNum;
   };
 });
 
-console.log(numbers);
+// END > Print numbers to display
 
-console.log(operators);
-// console.log(pushBtn(numbers));
-// console.log(document.getElementById("numbers").value);
+// Print operators to display
+
+const keyOperators = document.getElementsByClassName("operator");
+
+Array.from(keyOperators).forEach(function (keyOperators) {
+  keyOperators.onclick = function () {
+    const keyPrintOps = keyOperators.innerHTML;
+    displayPrint.innerText = keyPrintOps;
+  };
+});
+
+// END > Print operators to display
