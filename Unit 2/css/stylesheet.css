@@ -53,22 +53,25 @@ body {
 .calculator > button:hover {
   background-color: var(--flame);
   opacity: 0.9;
-  transition: 0.5s;
+  transition: 0.75s;
 }
 
 .bigBtn {
   grid-column: span 2;
 }
 
-.calculator > .equals {
+.calculator > #equals {
   background: var(--flame);
 }
 
-.calculator > .equals:hover {
+.calculator > #equals:hover {
   background: var(--dim-gray);
+  transition: 0.75s;
 }
 
-.calculator > .operator {
+.calculator > #operator,
+.calculator > #clearAll,
+.calculator > #delete {
   background: var(--jet-2);
 }
 

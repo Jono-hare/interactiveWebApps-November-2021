@@ -1,10 +1,10 @@
-const numberButton = document.querySelectorAll("[data-number]");
-const operatorButton = document.querySelectorAll("[data-operation]");
-const equalsButton = document.querySelector("[data-equals]");
-const deleteButton = document.querySelector("[data-delete]");
-const allClearButton = document.querySelector("[data-all-clear]");
-const displayOne = document.querySelector("[data-display-one]");
-const displayTwo = document.querySelector("[data-display-two]");
+const numberButton = document.querySelectorAll("#number");
+const operatorButton = document.querySelectorAll("#operator");
+const equalsButton = document.querySelector("#equals");
+const deleteButton = document.querySelector("#delete");
+const allClearButton = document.querySelector("#clearAll");
+const displayOne = document.querySelector(".displayOne");
+const displayTwo = document.querySelector(".displayTwo");
 
 let printNumber = "";
 let firstNumber = "";
@@ -12,11 +12,15 @@ let secondNumber = "";
 let operation = "";
 
 // display functions
+
 let currentDisplay = (text) => {
   displayTwo.innerText = text;
+  secondNumber = printNumber;
 };
 
 let secondDisplay = (operatorButton) => {
+  printNumber = "";
+  operation = operatorButton;
   displayOne.innerText = displayTwo.innerText + " " + operatorButton;
   displayOne.innerText = displayOne.innerText;
 };
@@ -26,35 +30,51 @@ let secondDisplay = (operatorButton) => {
 let clear = function () {
   displayOne.innerHTML = "";
   displayTwo.innerHTML = 0;
+  printNumber = "";
+  firstNumber = "";
+  secondNumber = "";
+  operation = "";
 };
 
 const deleteInput = function () {
   displayTwo.innerHTML = 0;
+  printNumber = "";
 };
 
-const appendNumber = function (numberButton) {};
+// Computing
 
-const divide = function () {};
-
-const addInput = function () {};
-
-const subtractInput = function (number) {};
-
-const compute = function () {};
+const appendNumber = function (firstNumber, secondNumber, operation) {
+  if (operation == "*") {
+    displayTwo.innerHTML = Number(firstNumber) * Number(secondNumber);
+  } else if (operation == "-") {
+    displayTwo.innerHTML = Number(firstNumber) - Number(secondNumber);
+  } else if (operation == "+") {
+    displayTwo.innerHTML = Number(firstNumber) + Number(secondNumber);
+  } else {
+    displayTwo.innerHTML = Number(firstNumber) / Number(secondNumber);
+  }
+};
 
 //  Event listeners
 
 numberButton.forEach((numberButton) => {
   numberButton.addEventListener("click", () => {
-    let printNumber = numberButton.innerHTML;
+    printNumber += numberButton.innerHTML;
     currentDisplay(printNumber);
+    console.log("value of firstNumber" + " " + firstNumber);
+    console.log("value of secondNumber" + " " + secondNumber);
+    console.log("value of operation" + " " + operation);
   });
 });
 
 operatorButton.forEach((operatorButton) => {
   operatorButton.addEventListener("click", () => {
-    let printOperation = operatorButton.innerText;
-    secondDisplay(printOperation);
+    operation = operatorButton.innerText;
+    firstNumber = secondNumber;
+    secondDisplay(operation);
+    console.log("value of firstNumber" + " " + firstNumber);
+    console.log("value of printNumber" + " " + printNumber);
+    console.log("value of operation" + " " + operation);
   });
 });
 
@@ -66,4 +86,6 @@ deleteButton.addEventListener("click", () => {
   deleteInput();
 });
 
-//  Print numbers to display
+equalsButton.addEventListener("click", () => {
+  appendNumber(firstNumber, secondNumber, operation);
+});
