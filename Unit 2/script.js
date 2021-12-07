@@ -33,6 +33,7 @@ let clear = function () {
   printNumber = "";
   firstNumber = "";
   secondNumber = "";
+  finalNumber = "";
   operation = "";
 };
 
@@ -43,7 +44,7 @@ const deleteInput = function () {
 
 // Computing
 
-const appendNumber = function (firstNumber, secondNumber, operation) {
+const compute = function (firstNumber, secondNumber, operation) {
   if (operation == "*") {
     displayTwo.innerHTML = Number(firstNumber) * Number(secondNumber);
   } else if (operation == "-") {
@@ -53,6 +54,8 @@ const appendNumber = function (firstNumber, secondNumber, operation) {
   } else {
     displayTwo.innerHTML = Number(firstNumber) / Number(secondNumber);
   }
+  displayOne.innerText =
+    firstNumber + " " + operation + " " + secondNumber + " = ";
 };
 
 //  Event listeners
@@ -61,9 +64,9 @@ numberButton.forEach((numberButton) => {
   numberButton.addEventListener("click", () => {
     printNumber += numberButton.innerHTML;
     currentDisplay(printNumber);
-    // console.log("value of firstNumber" + " " + firstNumber);
-    // console.log("value of secondNumber" + " " + secondNumber);
-    // console.log("value of operation" + " " + operation);
+    console.log("value of firstNumber" + " " + firstNumber);
+    console.log("value of secondNumber" + " " + secondNumber);
+    console.log("value of operation" + " " + operation);
   });
 });
 
@@ -72,9 +75,9 @@ operatorButton.forEach((operatorButton) => {
     operation = operatorButton.innerText;
     firstNumber = secondNumber;
     secondDisplay(operation);
-    // console.log("value of firstNumber" + " " + firstNumber);
-    // console.log("value of printNumber" + " " + printNumber);
-    // console.log("value of operation" + " " + operation);
+    console.log("value of firstNumber" + " " + firstNumber);
+    console.log("value of printNumber" + " " + printNumber);
+    console.log("value of operation" + " " + operation);
   });
 });
 
@@ -87,5 +90,5 @@ deleteButton.addEventListener("click", () => {
 });
 
 equalsButton.addEventListener("click", () => {
-  appendNumber(firstNumber, secondNumber, operation);
+  compute(firstNumber, secondNumber, operation);
 });
