@@ -50,7 +50,16 @@ body {
   color: var(--floral-white);
 }
 
-.calculator > button:hover {
+.calculator > button:hover,
+.calculator > #operator:hover,
+.calculator > #delete:hover,
+.calculator > #clearAll:hover {
+  background-color: var(--flame);
+  opacity: 0.9;
+  transition: 0.75s;
+}
+
+.calculator > #operator:hover {
   background-color: var(--flame);
   opacity: 0.9;
   transition: 0.75s;
@@ -67,6 +76,7 @@ body {
 .calculator > #equals:hover {
   background: var(--dim-gray);
   transition: 0.75s;
+  color: var(--flame);
 }
 
 .calculator > #operator,
