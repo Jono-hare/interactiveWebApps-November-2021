@@ -59,12 +59,6 @@ body {
   transition: 0.75s;
 }
 
-.calculator > #operator:hover {
-  background-color: var(--flame);
-  opacity: 0.9;
-  transition: 0.75s;
-}
-
 .bigBtn {
   grid-column: span 2;
 }
