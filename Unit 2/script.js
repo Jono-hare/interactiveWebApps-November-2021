@@ -61,9 +61,9 @@ numberButton.forEach((numberButton) => {
   numberButton.addEventListener("click", () => {
     printNumber += numberButton.innerHTML;
     currentDisplay(printNumber);
-    console.log("value of firstNumber" + " " + firstNumber);
-    console.log("value of secondNumber" + " " + secondNumber);
-    console.log("value of operation" + " " + operation);
+    // console.log("value of firstNumber" + " " + firstNumber);
+    // console.log("value of secondNumber" + " " + secondNumber);
+    // console.log("value of operation" + " " + operation);
   });
 });
 
@@ -72,9 +72,9 @@ operatorButton.forEach((operatorButton) => {
     operation = operatorButton.innerText;
     firstNumber = secondNumber;
     secondDisplay(operation);
-    console.log("value of firstNumber" + " " + firstNumber);
-    console.log("value of printNumber" + " " + printNumber);
-    console.log("value of operation" + " " + operation);
+    // console.log("value of firstNumber" + " " + firstNumber);
+    // console.log("value of printNumber" + " " + printNumber);
+    // console.log("value of operation" + " " + operation);
   });
 });
 
