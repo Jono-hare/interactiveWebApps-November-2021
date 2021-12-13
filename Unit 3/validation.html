@@ -37,11 +37,15 @@
       <!-- Floating New Task -->
       <div class="form-floating">
         <input
+          data-toggle="tooltip" 
+          data-placement="right" 
+          title="Required and must contain no html characters"
           type="text"
           class="form-control"
           id="newTask"
           placeholder="New Task"
           required
+          
         />
         <label for="newTask">New Task</label>
       </div>
@@ -49,12 +53,15 @@
       <!-- Floating Task description -->
       <div class="form-floating">
         <input
+          data-toggle="tooltip" 
+          data-placement="right" 
+          title="Task description is optional"
           type="text"
           class="form-control"
           id="taskDescription"
           placeholder="Task Description"
         />
-        <label for="taskDescription">Task Description</label>
+        <label for="taskDescription">Task Description (optional)</label>
       </div>
 
       <!-- Floating Time & Date -->
@@ -63,6 +70,9 @@
         <div class="col-md">
           <div class="form-floating">
             <input
+              data-toggle="tooltip" 
+              data-placement="right" 
+              title="Required. Must select a date."
               type="date"
               placeholder="Due Date"
               class="form-control"
@@ -76,6 +86,9 @@
           <div class="col-md">
             <div class="form-floating">
               <input
+                data-toggle="tooltip" 
+                data-placement="right" 
+                title="Required. Must select a time."
                 type="time"
                 placeholder="Due Time"
                 class="form-control"
