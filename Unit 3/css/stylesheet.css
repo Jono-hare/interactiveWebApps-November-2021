@@ -1,0 +1,52 @@
+:root {
+  /* Fonts */
+  --calcBtns: "Genos", sans-serif;
+  --calcDisplay: "Orbitron", sans-serif;
+
+  /* Colors */
+  --primaryBlue: #b4cce6;
+  --flame: #eb5e28ff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: var(--calcDisplay);
+  font-weight: normal;
+}
+
+/* Floating text styling */
+.form-floating {
+  border-left: 5px solid var(--flame);
+  margin: 20px;
+}
+
+.form-floating:hover {
+  transition: 0.5s;
+  box-shadow: 5px 5px 7.5px var(--primaryBlue);
+}
+
+/* Button styling */
+
+.text-center > button {
+  background-color: var(--flame);
+  color: aliceblue;
+}
+
+.text-center > button:hover {
+  background-color: var(--primaryBlue);
+  color: aliceblue;
+  transition: 0.5s;
+}
+
+/* Hidden p text */
+
+.hidden {
+  display: none;
+}
+
+p {
+  color: var(--flame);
+  font-weight: bold;
+}
