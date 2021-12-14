@@ -5,12 +5,10 @@ const dueTime = document.getElementById("dueTime");
 const submitBtn = document.getElementById("submitBtn");
 
 const taskText = document.getElementById("taskText");
-const dateText = document.getElementById("dateText");
-const timeText = document.getElementById("timeText");
 
-let taskTrue = false;
-let dateTrue = false;
-let timeTrue = false;
+// let taskTrue = false;
+// let dateTrue = false;
+// let timeTrue = false;
 
 const noHtml = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
 
