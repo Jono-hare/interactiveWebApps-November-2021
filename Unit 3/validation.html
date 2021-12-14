@@ -8,8 +8,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/stylesheet.css" />
 
-    
-
     <!--  Bootstrap CSS  -->
 
     <link
@@ -37,24 +35,28 @@
       <!-- Floating New Task -->
       <div class="form-floating">
         <input
-          data-toggle="tooltip" 
-          data-placement="right" 
+          data-toggle="tooltip"
+          data-placement="right"
           title="Required and must contain no html characters"
           type="text"
           class="form-control"
           id="newTask"
           placeholder="New Task"
-          required
-          
         />
         <label for="newTask">New Task</label>
+      </div>
+
+      <div class="container">
+        <p id="taskText" class="hidden">
+          Please make sure your task contains no HTML characters html
+        </p>
       </div>
 
       <!-- Floating Task description -->
       <div class="form-floating">
         <input
-          data-toggle="tooltip" 
-          data-placement="right" 
+          data-toggle="tooltip"
+          data-placement="right"
           title="Task description is optional"
           type="text"
           class="form-control"
@@ -70,33 +72,30 @@
         <div class="col-md">
           <div class="form-floating">
             <input
-              data-toggle="tooltip" 
-              data-placement="right" 
+              data-toggle="tooltip"
+              data-placement="right"
               title="Required. Must select a date."
               type="date"
               placeholder="Due Date"
               class="form-control"
               id="dueDate"
-              required
             />
             <label for="dueDate">Due Date</label>
           </div>
-          </div>
-          <!-- Floating Due Time -->
-          <div class="col-md">
-            <div class="form-floating">
-              <input
-                data-toggle="tooltip" 
-                data-placement="right" 
-                title="Required. Must select a time."
-                type="time"
-                placeholder="Due Time"
-                class="form-control"
-                id="dueTime"
-                required
-              />
-              <label for="dueTime">Due Time</label>
-            </div>
+        </div>
+        <!-- Floating Due Time -->
+        <div class="col-md">
+          <div class="form-floating">
+            <input
+              data-toggle="tooltip"
+              data-placement="right"
+              title="Required. Must select a time."
+              type="time"
+              placeholder="Due Time"
+              class="form-control"
+              id="dueTime"
+            />
+            <label for="dueTime">Due Time</label>
           </div>
         </div>
       </dic>
@@ -111,21 +110,21 @@
           <li class="list-group-item" id="orderedList listTime">Due Time</li>
         </ul>
       </div> -->
-      
+
       <!-- Submit btn -->
       <div class="text-center">
-        <button type="submit"
-                value="submit" 
-                class=" btn 
-                        btn-xl
-                        m-3"
-                id="submitBtn">
-                        Create Task
+        <button
+          type="submit"
+          value="submit"
+          class="btn btn-xl m-3"
+          id="submitBtn"
+        >
+          Create Task
         </button>
-    </div>
+      </div>
     </form>
 
     <!-- JavaScript -->
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -1,16 +1,30 @@
-const newTask = document.querySelector("#newTask");
-const taskDescription = document.querySelector("#taskDescription");
-const dueDate = document.querySelector("#dueDate");
-const dueTime = document.querySelector("#dueTime");
-const submitBtn = document.querySelector("#submitBtn");
+const newTask = document.getElementById("newTask");
+const taskDescription = document.querySelector("taskDescription");
+const dueDate = document.getElementById("dueDate");
+const dueTime = document.getElementById("dueTime");
+const submitBtn = document.getElementById("submitBtn");
 
-// challenge 1 - Add custom instructions
+const taskText = document.getElementById("taskText");
+const dateText = document.getElementById("dateText");
+const timeText = document.getElementById("timeText");
 
-submitBtn.addEventListener("click", () => {
-  if (newTask.value === "") {
+let taskTrue = false;
+let dateTrue = false;
+let timeTrue = false;
+
+const noHtml = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+// challenge 2 - Add custom instructions
+
+function myValidation() {
+  if (newTask.value.match(noHtml)) {
+    taskText.style.display = "block";
+    newTask.setCustomValidity("");
+  } else if (newTask.value.length == 0) {
     newTask.setCustomValidity("Required and must contain no HTML characters.");
   } else {
     newTask.setCustomValidity("");
+    taskText.style.display = "none";
   }
 
   if (dueDate.value == null || dueDate.value == "") {
@@ -24,4 +38,10 @@ submitBtn.addEventListener("click", () => {
   } else {
     dueTime.setCustomValidity("");
   }
+}
+
+// Event listeners
+
+submitBtn.addEventListener("click", () => {
+  myValidation();
 });

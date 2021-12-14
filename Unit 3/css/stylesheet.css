@@ -16,40 +16,18 @@
   font-weight: normal;
 }
 
-div > .container {
-}
-
+/* Floating text styling */
 .form-floating {
   border-left: 5px solid var(--flame);
-  /* max-width: 50rem; */
-  /* padding: 15px; */
   margin: 20px;
-  /* box-shadow: 0.5px 1px 5px black; */
 }
 
 .form-floating:hover {
-  /* border-left: 5px solid blue; */
   transition: 0.5s;
   box-shadow: 5px 5px 7.5px var(--primaryBlue);
 }
 
-.validation {
-  max-width: 15rem;
-  margin: auto;
-  /* list-style-type: none; */
-  /* margin: auto; */
-  /* width: 10rem; */
-  /* text-align: center; */
-  /* display: flex; */
-  /* flex-direction: column; */
-}
-
-li {
-  list-style-type: disc;
-  display: inline;
-  color: red;
-  font-weight: bold;
-}
+/* Button styling */
 
 .text-center > button {
   background-color: var(--flame);
@@ -62,43 +40,13 @@ li {
   transition: 0.5s;
 }
 
-/* tooltip */
+/* Hidden p text */
 
-/* .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+.hidden {
+  display: none;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+p {
+  color: var(--flame);
+  font-weight: bold;
 }
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-} */
